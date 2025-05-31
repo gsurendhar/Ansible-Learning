@@ -1,0 +1,11 @@
+-   first_name: Surendhar
+    last_name: G
+    DOB: 2024-02-02
+    Address: 
+    -   type: Perm_Address
+        door_no: 143
+        street: Shiva_Nagar
+    -   type: CurrentAddress
+        door_no: 256
+        street:  Shiva_road 
+ 
