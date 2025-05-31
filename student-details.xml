@@ -1,0 +1,15 @@
+<student>
+    <firstname>Surendhar</firstname>
+    <lastname>G</lastname>
+    <DOB>2024-02-02</DOB>
+    <Address>
+        <PermAddress>
+            <doorno>143</doorno>
+            <street>Shivaji Nagar</street>
+        </PermAddress>
+        <CurrentAddress>
+            <doorno>256</doorno>
+            <street>Shivaji Road</street>
+        </CurrentAddress>
+    </Address>
+</student>
