@@ -3,7 +3,7 @@
   become: yes
   tasks: 
   - name : installation of {{ item }}
-    ansible.builtin.dnf
+    ansible.builtin.dnf :
       name: {{ item }}
       state: installed
     loops:
