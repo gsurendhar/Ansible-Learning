@@ -1,0 +1,17 @@
+- name: Conditions checking
+  hosts: local
+  connections: local
+  vars_prompt:
+    name : number
+    prompt: please enter a number to check  
+  
+  tasks:
+  - name: print the number is less than 100 
+    ansible.builtin.debug:
+      msg: "Given number {{ number }} is less than 100 "
+    when: number>100
+
+  - name: print the number is grater than 100 
+    ansible.builtin.debug:
+      msg: "Given number {{ number }} is grater than 100 "
+    when: number>100
