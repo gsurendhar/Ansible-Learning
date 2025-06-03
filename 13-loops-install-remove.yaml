@@ -1,0 +1,15 @@
+- name : install and remove at ones
+  hosts : local
+  connection : local
+  become : yes
+  tasks :
+  - name : installation of nginx, vim and remove remaining
+    ansible.builtin.package:
+      name : "{{ item.name }}"
+      state : "{{ item.state }}"
+    loops :
+    - { name: 'nginx', state: 'present' }
+    - { name: 'httpd', state: 'absent' }
+    - { name: 'zip', state: 'absent' }
+    - { name: 'git', state: 'absent' }
+    - { name: 'vim', state: 'present' }
