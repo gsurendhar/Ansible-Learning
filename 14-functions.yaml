@@ -1,0 +1,51 @@
+- name : functions
+  hosts : local
+  connection : local
+  tasks :
+  - name : default value assigning to vars if not defined any where
+    ansible.builtin.debug:
+    msg : " Hello, {{ person | default(' ramesh ')}}"
+
+  - name : print names
+    vars:
+      person: "suresh, shiva, anjii, ram"
+      ansible.builtin.debug:
+        msg : "{{ person | split(',')}}"
+
+  - name : convert map into list
+    vars:
+      course:
+        name: ansible
+        duration: 10Hr
+        trainer: sivakumar
+      ansible.builtin.debug:              # error occurred
+        msg : "course Info : {{ course | dict2item }}"
+
+  - name : convert list into map 
+    vars:
+    course:
+      - { 'key': 'name', 'value' : 'ansible' } 
+      - { 'key': 'duration', 'value' : '10Hr' } 
+      - { 'key': 'trainer', 'value' : 'sivakumar' } 
+    ansible.builtin.debug:           
+      msg : "course Info : {{ course | item2dict }}"
+
+  - name : convert to upper case
+    vars:
+      name : "Surendhar Gonela"
+    ansible.builtin.debug:
+      msg : " Hello, {{ name | upper }}"
+
+  - name : convert to lower case
+    vars:
+      name : "Surendhar Gonela"
+    ansible.builtin.debug:
+      msg :" Hello, {{ name | lower }}"
+
+  - name : ip address is valid or not 
+    vars:
+      ip1: "324.120.255.762"
+      ip2: "192.120.255.162"
+    ansible.builtin.debug:
+      msg: "is {{ ip1 | ansible.utils.ipaddr }}"
+      msg: "is {{ ip2 | ansible.utils.ipaddr }}"

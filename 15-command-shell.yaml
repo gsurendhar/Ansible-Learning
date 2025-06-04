@@ -1,0 +1,12 @@
+- name : shell Vs command
+  hosts: local
+  connection: local
+  tasks :
+  - name : redirect ls -la output to a file
+    ansible.builtin.command: "ls -la > /tmp/output.txt"
+    ansible.builtin.shell: "ls -la > /tmp/output.txt"
+    register: command_result
+
+  - name: print the outcome
+    ansible.builtin.debug :
+      msg : "{{ command_result }}"
