@@ -63,7 +63,7 @@ As the user `admin`
 
 
 
-🔧 Common Ansible Ad Hoc Command Options
+**🔧 Common Ansible Ad Hoc Command Options**
 Option	| Description|	Example
 ----------------------|----------------------------------------------------|-------------------------------|
 |`-i	`|Inventory file or host list|	`-i inventory.ini`|
