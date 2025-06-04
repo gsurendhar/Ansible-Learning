@@ -1,0 +1,9 @@
+- name : functions
+  hosts : local
+  connection : local
+  tasks :
+  - name : default value assigning to vars if not defined any where
+    ansible.builtin.debug:
+    msg : " Hello, {{ person | default(' ramesh ')}}"
+
+  
