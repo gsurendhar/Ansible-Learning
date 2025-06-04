@@ -11,3 +11,14 @@
       person: "suresh, shiva, anjii, ram"
       ansible.builtin.debug:
         msg : "{{ person | split(',')}}"
+
+  - name : convert map into list
+    vars:
+      course:
+        name: ansible
+        duration: 10Hr
+        trainer: sivakumar
+      ansible.builtin.debug:              # error occurred
+        msg : "course Info : {{ course | dict2item }}"
+
+ 
