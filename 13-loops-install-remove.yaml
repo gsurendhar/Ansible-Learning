@@ -11,5 +11,5 @@
     - { name: 'nginx', state: 'present' }
     - { name: 'httpd', state: 'absent' }
     - { name: 'zip', state: 'absent' }
-    - { name: 'git', state: 'absent' }
+    - { name: 'git', state: 'present' }
     - { name: 'vim', state: 'present' }
