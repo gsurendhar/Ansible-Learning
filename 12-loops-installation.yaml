@@ -2,7 +2,7 @@
   hosts : local
   become: yes
   tasks: 
-  - name : installation of {{ item }}
+  - name : "installation of {{ item }}"
     ansible.builtin.dnf :
       name: "{{ item }}"
       state: installed
