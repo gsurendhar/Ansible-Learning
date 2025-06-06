@@ -33,13 +33,13 @@
 
   - name : convert to upper case
     vars:
-      name : "Surendhar Gonel"
+      name : "Surendhar Gonela"
     ansible.builtin.debug:
       msg : " Hello, {{ name | upper }}"
 
   - name : convert to lower case
     vars:
-      name : "Surendhar Gonela"
+      name : "Surendhar Gonel"
     ansible.builtin.debug:
       msg :" Hello, {{ name | lower }}"
 
