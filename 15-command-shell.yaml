@@ -3,7 +3,8 @@
   connection: local
   tasks :
   - name : redirect ls -la output to a file
-    ansible.builtin.command: "ls -la # > /tmp/output.txt"
+    # ansible.builtin.command: "ls -la /home/ec2-user/Ansible-Learning > /tmp/output.txt"
+    ansible.builtin.command: "ls -la  /home/ec2-user/Ansible-Learning
     ansible.builtin.shell: "ls -la > /tmp/output.txt"
     register: command_result
 
