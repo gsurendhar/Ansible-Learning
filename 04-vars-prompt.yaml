@@ -13,3 +13,15 @@
   - name: printing user information
     ansible.builtin.debug:
       msg: "user :{{ username }} and is password is {{ password }}"
+
+  - name: A_Number
+    prompt: please enter A_Number
+    private: false
+
+  - name: B_Number
+    prompt: please enter B_Number
+    private: false
+
+  - name: addition of two numbers
+    ansible.builtin.debug:
+      msg : " {{ LISTENER }} is seeing Addition  of {{ A_Number }} and {{ B_Number }} is {{A_Number+B_Number}}"
