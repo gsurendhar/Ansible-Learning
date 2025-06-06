@@ -4,7 +4,7 @@
   tasks :
   - name : default value assigning to vars if not defined any where
     ansible.builtin.debug:
-    msg : " Hello, {{ person | default(' ramesh ')}}"
+      msg : " Hello, {{ person | default(' ramesh ')}}"
 
   - name : print names
     vars:
