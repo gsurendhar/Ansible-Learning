@@ -1,8 +1,8 @@
 - name: preference of vars 
   hosts: local
   connection: local
-  vars:
-    GREETING: "Hello from Play Vars"
+  # vars:
+  #   GREETING: "Hello from Play Vars"
   
   # vars_files:
   #   - details.yaml
