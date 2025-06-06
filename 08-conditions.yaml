@@ -1,9 +1,9 @@
 - name: Conditions checking
   hosts: local
   connection: local
-  vars_prompt:
-    name : number
-    prompt: please enter a number to check  
+  # vars_prompt:
+  #   name : number
+  #   prompt: please enter a number to check  
   vars:
     # number1: '{{ number | int }}'
     number1: 99
