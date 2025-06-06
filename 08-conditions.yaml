@@ -4,14 +4,16 @@
   vars_prompt:
     name : number
     prompt: please enter a number to check  
+  vars:
+    number1: "{{ number | int }}"
   
   tasks:
   - name: print the number is less than 100 
     ansible.builtin.debug:
-      msg: "Given number {{ number }} is less than 100 "
-    when: number < 100
+      msg: "Given number {{ number1 }} is less than 100 "
+    when: number1 < 100
 
   - name: print the number is grater than 100 
     ansible.builtin.debug:
-      msg: "Given number {{ number }} is grater than 100 "
-    when: number > 100
+      msg: "Given number {{ number1 }} is grater than 100 "
+    when: number1 > 100
