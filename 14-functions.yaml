@@ -20,7 +20,7 @@
         trainer: sivakumar
     ansible.builtin.debug:              # error occurred
       msg : "course Info : {{ course | dict2item }}"
-    ignore_error: yes
+    # ignore_error: yes
 
   - name : convert list into map 
     vars:
