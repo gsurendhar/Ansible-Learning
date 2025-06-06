@@ -4,12 +4,12 @@
   vars:
     GREETING: "Hello from Play Vars"
   
-  vars_files:
-    - details.yaml
+  # vars_files:
+  #   - details.yaml
   
-  vars_prompt:
-    - name: GREETING
-      prompt: please enter the greetings
+  # vars_prompt:
+  #   - name: GREETING
+  #     prompt: please enter the greetings
 
   tasks:
   - name: print the greetings
