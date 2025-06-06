@@ -9,19 +9,18 @@
     prompt: please enter your password
     private: true
 
+  - name: A_Number
+    prompt: please enter A_Number
+    private: false
+
+  - name: B_Number
+    prompt: please enter B_Number
+    private: false
+
   tasks:
   - name: printing user information
     ansible.builtin.debug:
       msg: "user :{{ username }} and is password is {{ password }}"
-
-  vars_prompt:
-    - name: A_Number
-      prompt: please enter A_Number
-      private: false
-
-    - name: B_Number
-      prompt: please enter B_Number
-      private: false
 
   - name: addition of two numbers
     ansible.builtin.debug:
