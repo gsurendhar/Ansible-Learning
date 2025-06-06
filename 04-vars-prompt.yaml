@@ -13,7 +13,8 @@
   - name: printing user information
     ansible.builtin.debug:
       msg: "user :{{ username }} and is password is {{ password }}"
-
+      
+  vars_prompt:
   - name: A_Number
     prompt: please enter A_Number
     private: false
