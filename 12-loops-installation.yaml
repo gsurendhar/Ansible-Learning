@@ -4,7 +4,7 @@
   tasks: 
   - name : installation of {{ item }}
     ansible.builtin.dnf :
-      name: {{ item }}
+      name: "{{ item }}""
       state: installed
     loops:
     - nginx
