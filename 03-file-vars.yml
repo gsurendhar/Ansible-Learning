@@ -12,3 +12,7 @@
   - name: addition of two numbers
     ansible.builtin.debug:
       msg : " {{ LISTENER }} is seeing Addition  of {{ A_Number }} and {{ B_Number }} is {{A_Number+B_Number}}"
+
+  - name: addition of two numbers
+    ansible.builtin.debug:
+      msg : " {{ LISTENER }} is seeing Addition  of {{ num1 }} and {{ num2 }} is {{num1+num2}}"
