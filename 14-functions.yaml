@@ -9,7 +9,7 @@
   - name : print names
     vars:
       person: "suresh, shiva, anjii, ram"
-      ansible.builtin.debug:
+    ansible.builtin.debug:
         msg : "{{ person | split(',')}}"
 
   - name : convert map into list
