@@ -18,7 +18,7 @@
         name: ansible
         duration: 10Hr
         trainer: sivakumar
-      ansible.builtin.debug:              # error occurred
+    ansible.builtin.debug:              # error occurred
         msg : "course Info : {{ course | dict2item }}"
 
   - name : convert list into map 
