@@ -1,5 +1,6 @@
 - name: play book control using ansible Facts
   hosts: all
+  become: yes
   tasks:
   - name: install nginx if RedHat
     ansible.builtin.dnf:
