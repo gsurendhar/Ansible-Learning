@@ -39,9 +39,9 @@
 
   - name : convert to lower case
     vars:
-      name : "Surendhar Gonel"
+      name : "Surendhar Gonela"
     ansible.builtin.debug:
-      msg :" Hello, {{ name | lower }}"
+      msg : " Hello, {{ name | lower }}"
 
   - name : ip address is valid or not 
     vars:
