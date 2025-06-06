@@ -4,8 +4,8 @@
 
   - name: print Variables of COURSE information
     vars: 
-      COURSE: Ansible
-      DURATION: 10HOURS
-      TRAINER: SivaKumar
+      # COURSE: Ansible
+      # DURATION: 10HOURS
+      # TRAINER: SivaKumar
     ansible.builtin.debug: 
       msg : "Hello Course : {{ COURSE }}, Course duration : {{ DURATION }}, Trained by Mr.{{ TRAINER }} "
