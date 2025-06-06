@@ -3,7 +3,7 @@
   vars:
     DURATION: 120
     COURSE: "DevSecOps with AWS"
-    IS-LIVE: true
+    IS_LIVE: true
     TOOLS:
     - Linux
     - Shell
