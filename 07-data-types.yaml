@@ -1,9 +1,9 @@
 - name: ansible data-types
   hosts: all
   vars:
-    DURATION : 120
-    COURSE : "DevSecOps with AWS"
-    IS-LIVE : true
+    DURATION: 120
+    COURSE: "DevSecOps with AWS"
+    IS-LIVE: true
     TOOLS:
     - Linux
     - Shell
