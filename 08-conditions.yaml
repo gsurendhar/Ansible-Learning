@@ -5,8 +5,8 @@
     name : number
     prompt: please enter a number to check  
   vars:
-    # number1: "{{ number | int }}"
-    number1: 99
+    number1: {{ number | int }}
+    # number1: 99
   
   tasks:
   - name: print the number is less than 100 
