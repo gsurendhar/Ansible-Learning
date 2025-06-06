@@ -1,6 +1,6 @@
 - name: Conditions checking
   hosts: local
-  connections: local
+  connection: local
   vars_prompt:
     name : number
     prompt: please enter a number to check  
