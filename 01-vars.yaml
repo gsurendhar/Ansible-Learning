@@ -1,9 +1,9 @@
 - name: Play level variables
   hosts: frontend
   vars:
-    # COURSE: Ansible
-    # DURATION: 10HR
-    # TRAINER: SivaKumar
+    COURSE: Ansible
+    DURATION: 10HR
+    TRAINER: SivaKumar
   tasks:
   - name: print vars
     ansible.builtin.debug:
