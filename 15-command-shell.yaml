@@ -4,10 +4,18 @@
   tasks :
   - name : redirect ls -la output to a file
     # ansible.builtin.command: "ls -la /home/ec2-user/Ansible-Learning > /tmp/output.txt"
-    ansible.builtin.command: ls -la 
+    # ansible.builtin.command: ls -la 
     ansible.builtin.shell: ls -la > /tmp/output.txt
     register: command_result
 
   - name: print the outcome
     ansible.builtin.debug :
       msg : "{{ command_result }}"
+
+  - name : redirect ls -la output to a file
+    ansible.builtin.command: ls -la /home/ec2-user/Ansible-Learning
+    register: command_out
+
+  - name: print the outcome
+    ansible.builtin.debug :
+      msg : "{{ command_out }}"
