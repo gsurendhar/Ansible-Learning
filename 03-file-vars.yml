@@ -3,6 +3,9 @@
   connection: local
   vars_files:
     - details.yaml
+  vars:
+      num1: 125
+      num2: 225
 
   tasks:
   - name: print Course information
