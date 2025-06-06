@@ -47,7 +47,7 @@
     vars:
       ip1: "324.120.255.762"
     ansible.builtin.debug:
-      msg: "ip2 is {{ ip1 | ansible.utils.ipaddr }}"
+      msg: "{{ ip2 }} is {{ ip1 | ansible.utils.ipaddr }}"
 
   - name : ip2 address is valid or not
     vars:
