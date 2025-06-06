@@ -1,9 +1,9 @@
 - name : Variables from separate file
   hosts: local
   connection: local
-  vars_file:
+  vars_files:
     - details.yaml
-    
+
   tasks:
   - name: print Course information
     ansible.builtin.debug:
