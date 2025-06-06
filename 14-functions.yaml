@@ -49,4 +49,5 @@
       ip2: "192.120.255.162"
     ansible.builtin.debug:
       msg: "is {{ ip1 | ansible.utils.ipaddr }}"
+    ansible.builtin.debug:
       msg: "is {{ ip2 | ansible.utils.ipaddr }}"
