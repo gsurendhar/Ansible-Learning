@@ -1,0 +1,18 @@
+# if system user module is not available, how to create system user
+- name  : creating roboshop system user
+  hosts : local
+  connection : local
+  become  : yes
+  tasks :
+  - name  : checking roboshop user 
+    ansible.builtin.command: id roboshop
+    register  : id_out
+
+  - name : create roboshop user
+    ansible.builtin.command : useradd roboshop
+    when : id_out.rc != 0 # if already roboshop user created it will give id_out.rc is 0
+
+  - name : user already exist
+    ansible.builtin.debug : 
+      msg : "roboshop user already created"
+    when  : id_out.rc == 0 
